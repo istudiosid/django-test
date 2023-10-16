@@ -82,7 +82,7 @@ class UserDesaProfile(SafeDeleteModel):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name="profile"
     )
-    jabatan = models.IntegerField(choices=DesaJabatanChoices)
+    jabatan = models.IntegerField(choices=DesaJabatanChoices.choices)
 
     class Meta:
         db_table = "app_user_desa_profile"
