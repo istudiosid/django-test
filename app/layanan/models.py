@@ -7,6 +7,7 @@ LAYANAN_STATUS_CHOICES = (
     ("received", "Diterima"),
     ("accepted", "Disetujui oleh Kepala Bagian"),
     ("rejected", "Ditolak oleh Kepala Bagian"),
+    ("correction", "Diperbaiki oleh Penduduk"),
     ("approved", "Disetujui oleh Kepala Desa"),
     ("success", "Dicetak"),
 )
