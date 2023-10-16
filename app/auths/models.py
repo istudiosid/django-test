@@ -66,6 +66,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username", "role"]
 
+    def __repr__(self) -> str:
+        return self.username
+
     class Meta:
         db_table = "app_user"
 
@@ -83,6 +86,9 @@ class UserDesaProfile(SafeDeleteModel):
         User, on_delete=models.CASCADE, related_name="profile"
     )
     jabatan = models.IntegerField(choices=DesaJabatanChoices.choices)
+
+    def __repr__(self) -> str:
+        return f"{self.user.username}-{self.jabatan}"
 
     class Meta:
         db_table = "app_user_desa_profile"

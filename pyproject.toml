@@ -38,4 +38,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
-known_local_folder = ["app", "auths", "core", "datamaster"]
+known_local_folder = ["app", "auths", "core", "datamaster", "layanan"]
