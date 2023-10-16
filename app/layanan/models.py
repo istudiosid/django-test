@@ -13,6 +13,7 @@ LAYANAN_STATUS_CHOICES = (
 class LayananPemerintahan(SafeDeleteModel):
     _safedelete_policy = HARD_DELETE
 
+    desa = models.ForeignKey("datamaster.Desa", on_delete=models.CASCADE)
     keperluan = models.CharField(max_length=32)
     keterangan = models.CharField(max_length=32)
     status = models.CharField(choices=LAYANAN_STATUS_CHOICES, max_length=16)
@@ -37,6 +38,7 @@ class LayananPemerintahan(SafeDeleteModel):
 class LayananUmum(SafeDeleteModel):
     _safedelete_policy = HARD_DELETE
 
+    desa = models.ForeignKey("datamaster.Desa", on_delete=models.CASCADE)
     keperluan = models.CharField(max_length=32)
     keterangan = models.CharField(max_length=32)
     status = models.CharField(choices=LAYANAN_STATUS_CHOICES, max_length=16)
